@@ -16,6 +16,11 @@
       type="image/png"
       href="../assets/images/logo-dark.svg"
     />
+    <!-- choices -->
+    <link
+      rel="stylesheet"
+      href="../assets/css/choices.min.css"
+    />
     <!-- Css Files -->
     <link
       rel="stylesheet"
@@ -260,29 +265,17 @@
                 <li>
                   <a
                     class="asideItem activeAsideItem"
-                    href="managment-site.html"
+                    href="search.html"
                   >
                     <img
-                      src="../assets/icons/global-icon.svg"
+                      src="../assets/icons/search-normal-w.svg"
                       alt="hand Icon"
                       class=""
                     />
-                    إدارة المواقع
+                    البحث الموحد
                   </a>
                 </li>
-                <li>
-                  <a
-                    class="asideItem"
-                    href="tools.html"
-                  >
-                    <img
-                      src="../assets/icons/link-icon.svg"
-                      alt="hand Icon"
-                      class=""
-                    />
-                    أدوات الربط خارجية
-                  </a>
-                </li>
+
                 <li>
                   <a
                     class="asideItem"
@@ -342,6 +335,7 @@
                     >
                   </div>
                 </li>
+
                 <li>
                   <div class="flex items-center">
                     <svg
@@ -353,11 +347,11 @@
                       <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
                     </svg>
                     <a
-                      href="managment-site.html"
+                      href="search.html"
                       class="breadcrumbLink"
                       aria-current="page"
                     >
-                      إدارة المواقع
+                      نظام البحث الموحد في مواقع الجمعيات الخيرية
                     </a>
                   </div>
                 </li>
@@ -368,34 +362,257 @@
               <div class="advance-search w-full"></div>
             </nav>
             <!-- End Breadcrumb -->
-            <div class="w-full h-full flex justify-center items-center mt-20">
-              <div
-                class="shadow-dasboardItem shadow-[#C2C2C2] rounded-lg p-8 sm:w-full sm:max-w-xl text-center"
-              >
-                <img
-                  src="../assets/icons/internet.svg"
-                  alt="No News"
-                  class="mx-auto w-40"
-                />
-                <h3
-                  class="text-primary-600 text-title font-IBM font-medium my-5"
+            <div class="mt-5">
+              <div class="serach-bar p-2">
+                <form
+                  action=""
+                  method="post"
                 >
-                  لا يوجد أي مواقع مضافة حتى الان!
-                </h3>
-                <p class="text-primary-600 text-body font-IBM font-normal mb-5">
-                  ابدأ الان باضافة المواقع لنظامك
-                </p>
-                <a
-                  href="add-site.html"
-                  class="btn-primary"
-                >
-                  <img
-                    src="../assets/icons/add-circle.svg"
-                    alt="add-circle"
-                    class="w-5"
-                  />
-                  <span>إضافة موقع جديد</span></a
-                >
+                  <div
+                    class="flex flex-wrap justify-center items-center w-full gap-y-5"
+                  >
+                    <div class="w-full px-3 relative">
+                      <input
+                        type="text"
+                        class="js-choice input"
+                      /><img
+                        src="../assets/icons/tag.svg"
+                        alt=""
+                        class="absolute right-6 top-1/2 -translate-y-1/2 z-20"
+                      />
+                    </div>
+                    <div class="w-2/4 md:w-1/5 px-3">
+                      <select
+                        id="resource-type"
+                        data-hs-select='{
+                          
+                          "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
+                          "toggleClasses": "select-input",
+                          "dropdownClasses": "select-dropdown",
+                          "optionClasses": "select-option",
+                          "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"hidden hs-selected:block\"><svg class=\"shrink-0 size-3.5 text-blue-600 \" xmlns=\"http:.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></span></div>",
+                          "extraMarkup": "<div class=\"absolute top-1/2 end-3 -translate-y-1/2\"><svg class=\"shrink-0 size-3.5 text-gray-500 \" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m7 15 5 5 5-5\"/><path d=\"m7 9 5-5 5 5\"/></svg></div>"
+                        }'
+                        class="hidden"
+                        name="resource-type"
+                      >
+                        <option
+                          value="s"
+                          disabled
+                          selected
+                        >
+                          نظاق البحث
+                        </option>
+                        <option value="c">الموظفون</option>
+                        <option value="n">الطلاب</option>
+                      </select>
+                    </div>
+                    <div class="w-2/4 md:w-1/5 px-3">
+                      <select
+                        id="resource-type"
+                        data-hs-select='{
+                            
+                            "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
+                            "toggleClasses": "select-input",
+                            "dropdownClasses": "select-dropdown",
+                            "optionClasses": "select-option",
+                            "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"hidden hs-selected:block\"><svg class=\"shrink-0 size-3.5 text-blue-600 \" xmlns=\"http:.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></span></div>",
+                            "extraMarkup": "<div class=\"absolute top-1/2 end-3 -translate-y-1/2\"><svg class=\"shrink-0 size-3.5 text-gray-500 \" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m7 15 5 5 5-5\"/><path d=\"m7 9 5-5 5 5\"/></svg></div>"
+                          }'
+                        class="hidden"
+                        name="resource-type"
+                      >
+                        <option
+                          value="s"
+                          disabled
+                          selected
+                        >
+                          التاريخ
+                        </option>
+                        <option value="c">الموظفون</option>
+                        <option value="n">الطلاب</option>
+                      </select>
+                    </div>
+                    <div class="w-2/4 md:w-1/5 px-3">
+                      <select
+                        id="resource-type"
+                        data-hs-select='{
+                            
+                            "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
+                            "toggleClasses": "select-input",
+                            "dropdownClasses": "select-dropdown",
+                            "optionClasses": "select-option",
+                            "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"hidden hs-selected:block\"><svg class=\"shrink-0 size-3.5 text-blue-600 \" xmlns=\"http:.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></span></div>",
+                            "extraMarkup": "<div class=\"absolute top-1/2 end-3 -translate-y-1/2\"><svg class=\"shrink-0 size-3.5 text-gray-500 \" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m7 15 5 5 5-5\"/><path d=\"m7 9 5-5 5 5\"/></svg></div>"
+                          }'
+                        class="hidden"
+                        name="resource-type"
+                      >
+                        <option
+                          value="s"
+                          disabled
+                          selected
+                        >
+                          الأهمية
+                        </option>
+                        <option value="c">الموظفون</option>
+                        <option value="n">الطلاب</option>
+                      </select>
+                    </div>
+                    <div class="w-2/4 md:w-1/5 px-3">
+                      <div class="flex justify-center items-center gap-2">
+                        <p
+                          class="font-IBM font-normal text-primary-600 text-body"
+                        >
+                          البحث باستخدام أداة جوجل المدمجة
+                        </p>
+                        <input
+                          type="checkbox"
+                          name=""
+                          id=""
+                          class="checkBoxInput"
+                        />
+                      </div>
+                    </div>
+                    <div class="w-2/4 md:w-1/5 px-3">
+                      <button
+                        type="button"
+                        class="btn-primary w-full"
+                      >
+                        <img
+                          src="../assets/icons/search-normal-w.svg"
+                          alt=""
+                          class="w-5"
+                        />
+                        <span>بحث</span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="search-results p-2">
+                <div class="flex flex-col justify-center items-stretch gap-5">
+                  <div
+                    class="search-result-card p-5 rounded-lg shadow-dasboard"
+                  >
+                    <div
+                      class="card-header w-full flex justify-between items-center"
+                    >
+                      <p class="font-IBM font-normal text-gray-800 text-body">
+                        المصدر: جمعية أيتامنا
+                      </p>
+                      <p
+                        class="font-IBM font-normal text-gray-500 text-description"
+                      >
+                        تاريخ النشر : <span>11/04/2024</span>
+                      </p>
+                    </div>
+                    <div
+                      class="card-body my-5 flex justify-between items-start flex-wrap gap-2"
+                    >
+                      <div>
+                        <h3
+                          class="font-IBM font-bold text-primary-600 text-title mb-2"
+                        >
+                          التعامل مع الأيتام وحقوق اليتيم في ظلال السيرة النبوية
+                        </h3>
+                        <p class="font-IBM font-normal text-grey-900 text-body">
+                          “الفرق بين كفالة الأيتام وتبنيهم...” , “ورعاية اليتيم
+                          تعني قيام الجمعيات الخيرية له بكل ما يصل..”
+                        </p>
+                      </div>
+                      <!-- google tag -->
+                      <div
+                        class="flex justify-center items-center gap-2 bg-[#EDF8FB] rounded-full py-2 px-3"
+                      >
+                        <p
+                          class="font-IBM font-normal text-badges text-primary-600"
+                        >
+                          بواسطة Google
+                        </p>
+                        <img
+                          src="../assets/icons/google.svg"
+                          alt="google icon"
+                          class=""
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="card-footer w-full flex justify-between items-center flex-wrap gap-3"
+                    >
+                      <p class="font-IBM font-normal text-gray-800 text-body">
+                        تمت مطابقة 3 كلمات مفتاحية من أصل 3
+                      </p>
+                      <button class="btn-primary md:w-auto w-full">
+                        <img
+                          src="../assets/icons/export.svg"
+                          alt=""
+                        />
+                        <span>الذهاب للمصدر</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="search-result-card p-5 rounded-lg shadow-dasboard"
+                  >
+                    <div
+                      class="card-header w-full flex justify-between items-center"
+                    >
+                      <p class="font-IBM font-normal text-gray-800 text-body">
+                        المصدر: جمعية أيتامنا
+                      </p>
+                      <p
+                        class="font-IBM font-normal text-gray-500 text-description"
+                      >
+                        تاريخ النشر : <span>11/04/2024</span>
+                      </p>
+                    </div>
+                    <div
+                      class="card-body my-5 flex justify-between items-start flex-wrap gap-2"
+                    >
+                      <div>
+                        <h3
+                          class="font-IBM font-bold text-primary-600 text-title mb-2"
+                        >
+                          التعامل مع الأيتام وحقوق اليتيم في ظلال السيرة النبوية
+                        </h3>
+                        <p class="font-IBM font-normal text-grey-900 text-body">
+                          “الفرق بين كفالة الأيتام وتبنيهم...” , “ورعاية اليتيم
+                          تعني قيام الجمعيات الخيرية له بكل ما يصل..”
+                        </p>
+                      </div>
+                      <!-- google tag -->
+                      <!-- <div
+                      class="flex justify-center items-center gap-2 bg-[#EDF8FB] rounded-full py-2 px-3"
+                    >
+                      <p
+                        class="font-IBM font-normal text-badges text-primary-600"
+                      >
+                        بواسطة Google
+                      </p>
+                      <img
+                        src="../assets/icons/google.svg"
+                        alt="google icon"
+                        class=""
+                      />
+                    </div> -->
+                    </div>
+                    <div
+                      class="card-footer w-full flex justify-between items-center flex-wrap gap-3"
+                    >
+                      <p class="font-IBM font-normal text-gray-800 text-body">
+                        تمت مطابقة 3 كلمات مفتاحية من أصل 3
+                      </p>
+                      <button class="btn-primary md:w-auto w-full">
+                        <img
+                          src="../assets/icons/export.svg"
+                          alt=""
+                        />
+                        <span>الذهاب للمصدر</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -484,6 +701,8 @@
         </div>
       </div>
     </div>
+    <!-- choices -->
+    <script src="../assets/js/choices.min.js"></script>
 
     <!-- preline JS  -->
     <script src="../assets/js/preline.min.js"></script>

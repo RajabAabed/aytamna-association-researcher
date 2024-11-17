@@ -45,7 +45,9 @@
   .radioInput {
     @apply h-5 w-5 border bg-primary-100 border-primary-300 text-primary-500 focus:ring-primary-400 hover:border-primary-400;
   }
-
+  .checkBoxInput {
+    @apply h-5 w-5 border bg-primary-100 border-primary-300 text-primary-500 focus:ring-primary-400 hover:border-primary-400 rounded-md;
+  }
   .asideItem {
     @apply flex items-center gap-x-3.5 py-5 px-3 text-subTitle text-white  rounded-lg hover:bg-primary-500 focus:outline-none focus:bg-primary-500 hover:border-s-[#85B56B] hover:border-s-4 transition-all ease-in-out duration-200 delay-100;
   }

@@ -246,21 +246,28 @@ function printCard() {
 
 function choicesSelect() {
   // Pass single element
-  if (!document.querySelector("#keywords")) {
+  if (!document.querySelector(".js-choice")) {
     return;
   }
-  const element = document.querySelector("#keywords");
+  const element = document.querySelector(".js-choice");
   const choices = new Choices(element, {
     silent: true,
     removeItems: true,
     removeItemButton: true,
     removeItemButtonAlignLeft: false,
-
     addChoices: true,
     addItems: true,
     renderChoiceLimit: -1,
     maxItemCount: -1,
     closeDropdownOnSelect: "auto",
     singleModeForMultiSelect: true,
+    placeholder: true,
+    placeholderValue: "ادخل كلمات مفتاحية",
+    classNames: {
+      containerInner: ["input", "input-choice"],
+      input: ["choices__input"],
+      inputCloned: ["choices__input--cloned"],
+      itemSelectable: ["choices__item--selectable"],
+    },
   });
 }
